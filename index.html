@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Könige Spiel</title>
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/dom-hexagons.css" />
+        <link rel="stylesheet" href="styles/debugger.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+            <div class="hex"></div>
+        </div>
+        <div class="game-wrapper">
+            <canvas
+                class="game-map"
+                id="game-map"
+                width="700"
+                height="400"
+            ></canvas>
+        </div>
+        <div class="debugger">
+            <div class="debugger__content">
+                <div class="debugger_mouse-stats">
+                    <div class="debugger_property">
+                        <div class="debugger_label">fps</div>
+                        <div class="debugger_value js-debugger-sys-fps"></div>
+                    </div>
+                    <div class="debugger_property">
+                        <div class="debugger_label">x</div>
+                        <div
+                            class="
+                                debugger_value
+                                js-debugger-mouse-coordinates-x
+                            "
+                        ></div>
+                    </div>
+                    <div class="debugger_property">
+                        <div class="debugger_label">y</div>
+                        <div
+                            class="
+                                debugger_value
+                                js-debugger-mouse-coordinates-y
+                            "
+                        ></div>
+                    </div>
+                    <div class="debugger_property">
+                        <div class="debugger_label">Last Click Time</div>
+                        <div
+                            class="debugger_value js-debugger-mouse-click-time"
+                        ></div>
+                    </div>
+                    <div class="debugger_property">
+                        <div class="debugger_label">Last Click x</div>
+                        <div
+                            class="debugger_value js-debugger-mouse-click-x"
+                        ></div>
+                    </div>
+                    <div class="debugger_property">
+                        <div class="debugger_label">Last Click y</div>
+                        <div
+                            class="debugger_value js-debugger-mouse-click-y"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="debugger_toggle js-debugger-toggle">
+                X
+            </button>
+        </div>
+        <script type="module" src="scripts/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    transform: perspective(600px) rotateX(45deg) rotateZ(74deg);
+    display: none;
+}
+
+.hex {
+    background-color: var(--verde-suelo);
+    margin: var(--punta-hex) 4px 4px;
+    width: calc(var(--lado-hex) * 2);
+    height: calc(var(--punta-hex) * 2);
+    position: relative;
+}
+
+.hex:nth-child(6n + 1) {
+    margin-left: calc(var(--punta-hex) * 2);
+}
+
+.hex::before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: var(--punta-hex) solid var(--verde-suelo);
+    border-left: var(--lado-hex) solid transparent;
+    border-right: var(--lado-hex) solid transparent;
+    position: absolute;
+    top: calc(var(--punta-hex) * -1);
+}
+
+.hex::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: var(--punta-hex) solid var(--verde-suelo);
+    border-left: var(--lado-hex) solid transparent;
+    border-right: var(--lado-hex) solid transparent;
+    position: absolute;
+    bottom: calc(var(--punta-hex) * -1);
+}
+
+.hex:hover {
+    background-color: var(--verde-hover);
+}
+.hex:hover::before{
+    border-bottom-color: var(--verde-hover);
+}
+.hex:hover::after {
+    border-top-color: var(--verde-hover);
+}

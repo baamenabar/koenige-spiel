@@ -1,0 +1,11 @@
+.debugger {
+    padding: 1em;
+}
+.debugger_property {
+    display: flex;
+    flex-direction: row;
+}
+
+.debugger_label {
+    margin-right: 0.25em;
+}
