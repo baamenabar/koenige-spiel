@@ -10,6 +10,7 @@ export class Renderer {
         this.ctx = canvas.getContext("2d");
         this.game = game;
         this.resetCanvas();
+        this.render();
     }
 
     resetCanvas() {
@@ -17,5 +18,11 @@ export class Renderer {
         ctx.clearRect(0, 0, canvasRect.width, canvasRect.height);
         ctx.fillStyle = "rgb(125,234,245)";
         ctx.fillRect(0, 0, canvasRect.width, canvasRect.height);
+    }
+
+    render() {
+        window.requestAnimationFrame(render);
+        console.log("rendering one frame");
+        this.resetCanvas();
     }
 }
