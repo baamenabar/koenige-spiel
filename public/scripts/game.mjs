@@ -1,1 +1,4 @@
-export class Game {}
+export const gameData = {};
+export class Game {
+    constructor() {}
+}

@@ -1,4 +1,4 @@
-$$ = (selector) => document.querySelector(selector);
+export const $$ = (selector) => document.querySelector(selector);
 
 export class Debugger {
     source = null;
@@ -31,7 +31,7 @@ export class Debugger {
     }
 
     render(data) {
-        console.log("animation frame requested");
+        //console.log("animation frame requested");
         this.countFrames();
         window.requestAnimationFrame(() => {
             this.render(data);
